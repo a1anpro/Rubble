@@ -1,6 +1,6 @@
 package yanhui.utils;
 
-import yanhui.exception.ParseException;
+import yanhui.exception.RubbleException;
 
 public abstract class Token {
 	private int lineNumber; // 该token的位置
@@ -22,9 +22,9 @@ public abstract class Token {
 		return false;
 	}
 	
-//	public int getNumber(){
-//		throw new ParseException("not a number token");
-//	}
+	public int getNumber(){
+		throw new RubbleException("not a number token");
+	}
 	// 规定相应的子类要隐藏他们
 	public int getLineNumber(){
 		return lineNumber;
